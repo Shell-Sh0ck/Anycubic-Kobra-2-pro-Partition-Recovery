@@ -1,6 +1,7 @@
 # Anycubic-Kobra-2-pro-Partition-Recovery
 
 Ways to backup partitions on **Trigoilla_Spe_B_V1.0.x** motherboards using ssh or (xrock, upgrade tool):
+**All backup partitions for restoring the operating system only will be included in the releases.**
 1. ssh(root@192.168.1.77)
    The ssh method only works if your device is booting, connected to your AP (Access point WiFi) and has rinkhals installed on it, since ssh is not pre-installed in the regular  firmware.
    Now, to connect to the 3d printer, you need to find out its IP address on the local network. To do this, you can go to the printer settings and look there.: **Settings** -> **More Settings** -> **About Machine**. The WiFi IP field will specify the IP of your 3d printer.
@@ -18,13 +19,16 @@ Now, after the script is completed, all the sections of the 3d printer are on th
 mount -o loop,rw ./useremain /mnt/useremain 
 mount -o loop,rw ./userdata /mnt/userdata
 ```
+**All backup partitions for restoring the operating system only will be included in the releases.**
 2. (xrock, upgrade tool)
    In this method, you will have to open the printer and take out the motherboard to solder the usb (OTG) pins on the back of the motherboard as described in the above discussion: https://github.com/Bushmills/Anycubic-Kobra-3-rooted/discussions/5 this only works with **Trigoilla_Spe_B** motherboards.
-   Motherboard: Trigoilla_Spe_B_V1.0.5
+   
+   **Motherboard: Trigoilla_Spe_B_V1.0.5**
    <img width="720" height="1280" alt="Untitled3" src="https://github.com/user-attachments/assets/98e64da2-4964-47ee-8e43-4e901fe0d960" />
    <img width="493" height="321" alt="397723434-e75bfe6f-ec81-43cc-bfe9-87b0ffc491d4" src="https://github.com/user-attachments/assets/12370b0d-88c4-46b9-adb3-212256e17e76" />
    <img width="720" height="1280" alt="Untitled" src="https://github.com/user-attachments/assets/e857d5cc-18ca-4809-ac32-e4e12e251b7e" />
-   Motherboard: Trigoilla_Spe_B_V1.1.5
+   
+   **Motherboard: Trigoilla_Spe_B_V1.1.5**
    <img width="3024" height="4032" alt="377813827-4da806d9-014f-4139-8c9d-cef4a0998e15" src="https://github.com/user-attachments/assets/6dda20ff-9351-414e-ba0a-9b237ed9b075" />
    <img width="4000" height="3000" alt="361245682-56d29dc4-ce3e-482c-8ff0-d4d320daf5e0" src="https://github.com/user-attachments/assets/9e5e00da-028f-46c1-b92d-1b5298618435" />
 After you solder into the **5v,D+,D-,GND** pins, be sure to disconnect the power supply from the motherboard, the board must be powered by USB.
