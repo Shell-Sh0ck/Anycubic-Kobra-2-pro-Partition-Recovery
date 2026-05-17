@@ -3,7 +3,7 @@
 Ways to backup partitions on **Trigoilla_Spe_B_V1.0.x** motherboards using ssh or (xrock, upgrade tool):
 > [!NOTE]
 >If you want to add or change something, please create issues or a pull request.
->All backup partitions for restoring the operating system only will be included in the releases.**
+>All backup partitions for restoring the operating system only will be included in the releases.
 
 1. ssh(root@192.168.1.77)
    The ssh method only works if your device is booting, connected to your AP (Access point WiFi) and has rinkhals installed on it, since ssh is not pre-installed in the regular  firmware.
