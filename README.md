@@ -29,10 +29,8 @@ Now, after the script is completed, all the sections of the 3d printer are on th
 mount -o loop,rw ./useremain /mnt/useremain 
 mount -o loop,rw ./userdata /mnt/userdata
 ```
-**All backup partitions for restoring the operating system only will be included in the releases.**
 2. (xrock, upgrade tool)
-   In this method, you wi> [!WARNING]
-> Critical content demanding immediate user attention due to potential risks.ll have to open the printer and take out the motherboard to solder the usb (OTG) pins on the back of the motherboard as described in the above discussion: **https://github.com/Bushmills/Anycubic-Kobra-3-rooted/discussions/5** this only works with **Trigoilla_Spe_B** motherboards.
+ In this method, you will have to open the printer and take out the motherboard to solder the usb (OTG) pins on the back of the motherboard as described in the above discussion: **https://github.com/Bushmills/Anycubic-Kobra-3-rooted/discussions/5** this only works with **Trigoilla_Spe_B** motherboards.
    
    **Motherboard: Trigoilla_Spe_B_V1.0.5**
    <img width="720" height="1280" alt="Untitled3" src="https://github.com/user-attachments/assets/98e64da2-4964-47ee-8e43-4e901fe0d960" />
