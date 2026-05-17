@@ -9,10 +9,10 @@ Ways to backup partitions on **Trigoilla_Spe_B_V1.0.x** motherboards using ssh o
 But if you can't find out the ip of your device in this way, you can scan your local network and find the ip of your device: **nmap -n -sV -p 20 <ip you router>/24**
 When you have found out the ip address of your printer, we connect to it using ssh: ssh root@192.168.1.77 password **rockchip**
 <img width="913" height="118" alt="image" src="https://github.com/user-attachments/assets/581134f6-7871-4722-88dc-48855a5dcd8d" />
+**WARNING**: The script will prompt you to clear sensitive data, agree if you are going to publish it, it will delete credentials, certificates but will not affect **wifi_cfg**. Also, before executing the script, make sure that your flash drive is formatted in **exFAT(fat64)**, if it is not converted to the desired format, the error dd: file to large will appear and your partitions will be corrupted. **The author of the scripts, that is, I do not bear any responsibility for your actions!**
 After connecting, copy the script to **/root/backup_fwdd.sh**: https://gist.github.com/Shell-Sh0ck/3ee691212681474f65ad69851bf7e6ab#file-backup_fwdd-sh creating
 nano **backup_fwdd.sh** and insert the script. Making it executable: **chmod +x ./backup_fwdd.sh** and launch it **./backup_fwdd.sh** Be sure to insert a flash drive of at **least 10 gigabytes** in size
 
-**WARNING**: The script will prompt you to clear sensitive data, agree if you are going to publish it, it will delete credentials, certificates but will not affect **wifi_cfg**. Also, before executing the script, make sure that your flash drive is formatted in **exFAT(fat64)**, if it is not converted to the desired format, the error dd: file to large will appear and your partitions will be corrupted. **The author of the scripts, that is, I do not bear any responsibility for your actions!**
 <img width="1041" height="1413" alt="image" src="https://github.com/user-attachments/assets/834fba99-b7ef-41ac-ac1d-f01b8c3bbb79" />
 Now, after the script is completed, all the sections of the 3d printer are on the flash drive. (Optional) You can mount userdata and useremain to correct their contents (the same wifi_cfg):
 ```
