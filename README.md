@@ -37,10 +37,10 @@ Hold down the sw2 button on the motherboard and insert the USB without releasing
 <img width="658" height="252" alt="2026-05-07_23-02" src="https://github.com/user-attachments/assets/f105f5c9-3299-41ad-a68c-c93c8be50120" />
 Next, go to the xrock tool directory and run the command: ```sudo ./xrock maskrom rv1106_ddr_924MHz_v1.15.bin rv1106_usbplug_v1.09.bin --rc4-off``` next, go to the upgrade tool directory and execute ```./upgrade_tool pl``` copy part of the output to ```nano ./list.txt```
 <img width="957" height="346" alt="image" src="https://github.com/user-attachments/assets/cdab1b1c-e263-4e33-b8da-b4a87d31f243" />
-As you performed the steps above, copy the script to the directory with the **upgrade_tool** tool https://gist .github.com/Shell-Sh0ck/3ee691212681474f65ad69851bf7e6ab#file-backup_firmware-sh and make it executable: ```chmod +x ./backup_firmware.sh``` . Next, execute it ```./backup_firmware.sh```
+As you performed the steps above, copy the script to the directory with the **upgrade_tool** tool https://gist.github.com/Shell-Sh0ck/3ee691212681474f65ad69851bf7e6ab#file-backup_firmware-sh and make it executable: ```chmod +x ./backup_firmware.sh``` . Next, execute it ```./backup_firmware.sh```
 All sections will be placed in the **output** directory.
 
 How to flash partitions on **Trigoilla_Spe_B_V1.0.x** motherboards using (xrock, upgrade tool).
-1. At this stage, I think you already have (xrock, upde_tool), so to flash the partitions, also copy this script https://gist .github.com/Shell-Sh0ck/3ee691212681474f65ad69851bf7e6ab#file-update_firmware-sh in the upde_tool directory, change the path in the variable ```firmware_path="/home/motherfucker/Desktop/parts_backup-k2p"``` to specify where your partitions are stored. Make the script executable by ```chmod +x ./update_firmware.sh``` and fulfill it ```./update_firmware.sh```
+1. At this stage, I think you already have (xrock, upde_tool), so to flash the partitions, also copy this script https://gist.github.com/Shell-Sh0ck/3ee691212681474f65ad69851bf7e6ab#file-update_firmware-sh in the upde_tool directory, change the path in the variable ```firmware_path="/home/motherfucker/Desktop/parts_backup-k2p"``` to specify where your partitions are stored. Make the script executable by ```chmod +x ./update_firmware.sh``` and fulfill it ```./update_firmware.sh```
 <img width="660" height="879" alt="2026-05-08_00-03" src="https://github.com/user-attachments/assets/83fcee77-75fd-49ab-83d4-be0afa5be64e" />
 
