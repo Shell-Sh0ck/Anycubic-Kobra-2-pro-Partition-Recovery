@@ -46,3 +46,5 @@ How to flash partitions on **Trigoilla_Spe_B_V1.0.x** motherboards using (xrock,
 1. At this stage, I think you already have (xrock, update_tool), so to flash the partitions, also copy this script https://gist.github.com/Shell-Sh0ck/3ee691212681474f65ad69851bf7e6ab#file-update_firmware-sh in the update_tool directory, change the path in the variable ```firmware_path="/home/motherfucker/Desktop/parts_backup-k2p"``` to specify where your partitions are stored. Make the script executable by ```chmod +x ./update_firmware.sh``` and fulfill it ```./update_firmware.sh```
 <img width="660" height="879" alt="2026-05-08_00-03" src="https://github.com/user-attachments/assets/83fcee77-75fd-49ab-83d4-be0afa5be64e" />
 
+**If you want to add or change something, please create issues or a pull request.**
+
