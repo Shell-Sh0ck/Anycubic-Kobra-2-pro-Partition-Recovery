@@ -33,6 +33,7 @@ mount -o loop,rw ./userdata /mnt/userdata
    **Motherboard: Trigoilla_Spe_B_V1.1.5**
    <img width="3024" height="4032" alt="377813827-4da806d9-014f-4139-8c9d-cef4a0998e15" src="https://github.com/user-attachments/assets/6dda20ff-9351-414e-ba0a-9b237ed9b075" />
    <img width="4000" height="3000" alt="361245682-56d29dc4-ce3e-482c-8ff0-d4d320daf5e0" src="https://github.com/user-attachments/assets/9e5e00da-028f-46c1-b92d-1b5298618435" />
+   
 After you solder into the **5v,D+,D-,GND** pins, be sure to disconnect the power supply from the motherboard, the board must be powered by USB.
 Install xrock(https://github.com/xboot/xrock ) and upgrade tool(https://docs.radxa.com/en/som/cm/cm3j/low-level-dev/upgrade-tool)
 Hold down the sw2 button on the motherboard and insert the USB without releasing it, wait for 5 seconds, then you can release and perform lsusb.
