@@ -1,7 +1,10 @@
 # Anycubic-Kobra-2-pro-Partition-Recovery
 
 Ways to backup partitions on **Trigoilla_Spe_B_V1.0.x** motherboards using ssh or (xrock, upgrade tool):
-**All backup partitions for restoring the operating system only will be included in the releases.**
+> [!NOTE]
+>If you want to add or change something, please create issues or a pull request.
+>All backup partitions for restoring the operating system only will be included in the releases.**
+
 1. ssh(root@192.168.1.77)
    The ssh method only works if your device is booting, connected to your AP (Access point WiFi) and has rinkhals installed on it, since ssh is not pre-installed in the regular  firmware.
    Now, to connect to the 3d printer, you need to find out its IP address on the local network. To do this, you can go to the printer settings and look there.: **Settings** -> **More Settings** -> **About Machine**. The WiFi IP field will specify the IP of your 3d printer.
@@ -28,7 +31,8 @@ mount -o loop,rw ./userdata /mnt/userdata
 ```
 **All backup partitions for restoring the operating system only will be included in the releases.**
 2. (xrock, upgrade tool)
-   In this method, you will have to open the printer and take out the motherboard to solder the usb (OTG) pins on the back of the motherboard as described in the above discussion: **https://github.com/Bushmills/Anycubic-Kobra-3-rooted/discussions/5** this only works with **Trigoilla_Spe_B** motherboards.
+   In this method, you wi> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.ll have to open the printer and take out the motherboard to solder the usb (OTG) pins on the back of the motherboard as described in the above discussion: **https://github.com/Bushmills/Anycubic-Kobra-3-rooted/discussions/5** this only works with **Trigoilla_Spe_B** motherboards.
    
    **Motherboard: Trigoilla_Spe_B_V1.0.5**
    <img width="720" height="1280" alt="Untitled3" src="https://github.com/user-attachments/assets/98e64da2-4964-47ee-8e43-4e901fe0d960" />
@@ -56,6 +60,4 @@ How to flash partitions on **Trigoilla_Spe_B_V1.0.x** motherboards using (xrock,
 1. At this stage, I think you already have (xrock, update_tool), so to flash the partitions, also copy this script https://gist.github.com/Shell-Sh0ck/3ee691212681474f65ad69851bf7e6ab#file-update_firmware-sh in the update_tool directory, change the path in the variable ```firmware_path="/home/motherfucker/Desktop/parts_backup-k2p"``` to specify where your partitions are stored. Make the script executable by ```chmod +x ./update_firmware.sh``` and fulfill it ```./update_firmware.sh```
    
 <img width="660" height="879" alt="2026-05-08_00-03" src="https://github.com/user-attachments/assets/83fcee77-75fd-49ab-83d4-be0afa5be64e" />
-
-**If you want to add or change something, please create issues or a pull request.**
 
