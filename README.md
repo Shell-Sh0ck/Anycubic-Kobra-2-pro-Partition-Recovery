@@ -9,7 +9,9 @@ Ways to backup partitions on **Trigoilla_Spe_B_V1.0.x** motherboards using ssh o
 But if you can't find out the ip of your device in this way, you can scan your local network and find the ip of your device: **nmap -n -sV -p 20 <ip you router>/24**
 When you have found out the ip address of your printer, we connect to it using ssh: ssh root@192.168.1.77 password **rockchip**
 <img width="913" height="118" alt="image" src="https://github.com/user-attachments/assets/581134f6-7871-4722-88dc-48855a5dcd8d" />
+
 **WARNING**: The script will prompt you to clear sensitive data, agree if you are going to publish it, it will delete credentials, certificates but will not affect **wifi_cfg**. Also, before executing the script, make sure that your flash drive is formatted in **exFAT(fat64)**, if it is not converted to the desired format, the error dd: file to large will appear and your partitions will be corrupted. **The author of the scripts, that is, I do not bear any responsibility for your actions!**
+
 After connecting, copy the script to **/root/backup_fwdd.sh**: https://gist.github.com/Shell-Sh0ck/3ee691212681474f65ad69851bf7e6ab#file-backup_fwdd-sh creating
 nano **backup_fwdd.sh** and insert the script. Making it executable: **chmod +x ./backup_fwdd.sh** and launch it **./backup_fwdd.sh** Be sure to insert a flash drive of at **least 10 gigabytes** in size
 
@@ -21,7 +23,7 @@ mount -o loop,rw ./userdata /mnt/userdata
 ```
 **All backup partitions for restoring the operating system only will be included in the releases.**
 2. (xrock, upgrade tool)
-   In this method, you will have to open the printer and take out the motherboard to solder the usb (OTG) pins on the back of the motherboard as described in the above discussion: https://github.com/Bushmills/Anycubic-Kobra-3-rooted/discussions/5 this only works with **Trigoilla_Spe_B** motherboards.
+   In this method, you will have to open the printer and take out the motherboard to solder the usb (OTG) pins on the back of the motherboard as described in the above discussion: **https://github.com/Bushmills/Anycubic-Kobra-3-rooted/discussions/5** this only works with **Trigoilla_Spe_B** motherboards.
    
    **Motherboard: Trigoilla_Spe_B_V1.0.5**
    <img width="720" height="1280" alt="Untitled3" src="https://github.com/user-attachments/assets/98e64da2-4964-47ee-8e43-4e901fe0d960" />
@@ -40,7 +42,7 @@ Next, go to the xrock tool directory and run the command: ```sudo ./xrock maskro
 As you performed the steps above, copy the script to the directory with the **upgrade_tool** tool https://gist.github.com/Shell-Sh0ck/3ee691212681474f65ad69851bf7e6ab#file-backup_firmware-sh and make it executable: ```chmod +x ./backup_firmware.sh``` . Next, execute it ```./backup_firmware.sh```
 All sections will be placed in the **output** directory.
 
-How to flash partitions on **Trigoilla_Spe_B_V1.0.x** motherboards using (xrock, upgrade tool).
-1. At this stage, I think you already have (xrock, upde_tool), so to flash the partitions, also copy this script https://gist.github.com/Shell-Sh0ck/3ee691212681474f65ad69851bf7e6ab#file-update_firmware-sh in the upde_tool directory, change the path in the variable ```firmware_path="/home/motherfucker/Desktop/parts_backup-k2p"``` to specify where your partitions are stored. Make the script executable by ```chmod +x ./update_firmware.sh``` and fulfill it ```./update_firmware.sh```
+How to flash partitions on **Trigoilla_Spe_B_V1.0.x** motherboards using (xrock, upgrade_tool).
+1. At this stage, I think you already have (xrock, update_tool), so to flash the partitions, also copy this script https://gist.github.com/Shell-Sh0ck/3ee691212681474f65ad69851bf7e6ab#file-update_firmware-sh in the update_tool directory, change the path in the variable ```firmware_path="/home/motherfucker/Desktop/parts_backup-k2p"``` to specify where your partitions are stored. Make the script executable by ```chmod +x ./update_firmware.sh``` and fulfill it ```./update_firmware.sh```
 <img width="660" height="879" alt="2026-05-08_00-03" src="https://github.com/user-attachments/assets/83fcee77-75fd-49ab-83d4-be0afa5be64e" />
 
