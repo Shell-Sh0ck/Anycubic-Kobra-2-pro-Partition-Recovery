@@ -60,7 +60,6 @@ How to flash partitions on **Trigoilla_Spe_B_V1.0.x** motherboards using (xrock,
    
 <img width="660" height="879" alt="2026-05-08_00-03" src="https://github.com/user-attachments/assets/83fcee77-75fd-49ab-83d4-be0afa5be64e" />
 
-
 **How do I connect to WiFi?**
 
 In the usual way, in the device menu with these sections: https://github.com/Shell-Sh0ck/Anycubic-Kobra-2-pro-Partition-Recovery/releases/tag/k2pro it may not be possible to connect to the WiFi AP (It freezes endlessly at the network search stage). The solution is simple, directly change the files in **userdata/wifi_cfg**.
