@@ -36,7 +36,8 @@ mount -o loop,rw ./userdata /mnt/userdata
    <img width="720" height="1280" alt="Untitled3" src="https://github.com/user-attachments/assets/98e64da2-4964-47ee-8e43-4e901fe0d960" />
    <img width="493" height="321" alt="397723434-e75bfe6f-ec81-43cc-bfe9-87b0ffc491d4" src="https://github.com/user-attachments/assets/12370b0d-88c4-46b9-adb3-212256e17e76" />
    <img width="720" height="1280" alt="Untitled" src="https://github.com/user-attachments/assets/e857d5cc-18ca-4809-ac32-e4e12e251b7e" />
-   
+   <img width="912" height="1280" alt="5210688331518253505" src="https://github.com/user-attachments/assets/c5366491-a370-4ea3-a34e-786962c2ca2b" />
+
    **Motherboard: Trigoilla_Spe_B_V1.1.5**
    <img width="3024" height="4032" alt="377813827-4da806d9-014f-4139-8c9d-cef4a0998e15" src="https://github.com/user-attachments/assets/6dda20ff-9351-414e-ba0a-9b237ed9b075" />
    <img width="4000" height="3000" alt="361245682-56d29dc4-ce3e-482c-8ff0-d4d320daf5e0" src="https://github.com/user-attachments/assets/9e5e00da-028f-46c1-b92d-1b5298618435" />
@@ -58,4 +59,26 @@ How to flash partitions on **Trigoilla_Spe_B_V1.0.x** motherboards using (xrock,
 1. At this stage, I think you already have (xrock, update_tool), so to flash the partitions, also copy this script https://gist.github.com/Shell-Sh0ck/3ee691212681474f65ad69851bf7e6ab#file-update_firmware-sh in the update_tool directory, change the path in the variable ```firmware_path="/home/motherfucker/Desktop/parts_backup-k2p"``` to specify where your partitions are stored. Make the script executable by ```chmod +x ./update_firmware.sh``` and fulfill it ```./update_firmware.sh```
    
 <img width="660" height="879" alt="2026-05-08_00-03" src="https://github.com/user-attachments/assets/83fcee77-75fd-49ab-83d4-be0afa5be64e" />
+
+How do I connect to WiFi?
+
+In the usual way, in the device menu with these sections: https://github.com/Shell-Sh0ck/Anycubic-Kobra-2-pro-Partition-Recovery/releases/tag/k2pro it may not be possible to connect to the WiFi AP (It freezes endlessly at the network search stage). The solution is simple, directly change the files in **userdata/wifi_cfg**.
+
+> [!NOTE]
+> ctrl_interface=/var/run/wpa_supplicant
+>update_config=1
+>
+>network={
+>        ssid="**WiFi(Acess point name)**"
+>        psk="**password**"
+>}
+
+```
+mkdir /mnt/k2pro_userdata
+mount -o loop,rw ./userdata /mnt/k2pro_userdata/
+
+nano /mnt/k2pro_userdata/wifi_cfg/wpa_supplicant.conf
+nano /mnt/k2pro_userdata/wifi_cfg/wpa_supplicant.conf.bak
+```
+
 
